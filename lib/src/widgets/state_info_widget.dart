@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'primary_button.dart';
-
 class StateInfoWidget extends StatelessWidget {
   final IconData? icon;
   final String title;
@@ -56,9 +54,9 @@ class StateInfoWidget extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(16.0),
-            child: PrimaryButton(
-              text: buttonText,
-              onTap: onTap,
+            child: ElevatedButton(
+              onPressed: onTap,
+              child: Text(buttonText),
             ),
           ),
         ],
