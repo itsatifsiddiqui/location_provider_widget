@@ -4,6 +4,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geolocator/geolocator.dart' as geolocator;
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:location_provider_widget/src/widgets/primary_button.dart';
 
 import 'location_provider.dart';
 import 'widgets/state_info_widget.dart';
@@ -102,11 +103,11 @@ class LocationProviderWidget extends HookConsumerWidget {
             }
 
             return error?.call(e) ??
-                ElevatedButton(
-                  onPressed: () {
+                PrimaryButton(
+                  onTap: () {
                     ref.invalidate(locationProvider);
                   },
-                  child: Text(e.toString()),
+                  text: e.toString(),
                 );
           },
         );
