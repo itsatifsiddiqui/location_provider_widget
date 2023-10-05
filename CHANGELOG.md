@@ -11,3 +11,7 @@
 ## 0.0.3
 
 - Re-Add Primary Button .
+
+## 0.0.4
+
+- Make Progress Indicator Centered .

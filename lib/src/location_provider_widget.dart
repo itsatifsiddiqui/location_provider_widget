@@ -44,7 +44,7 @@ class LocationProviderWidget extends HookConsumerWidget {
               },
             );
           },
-          loading: loading ?? () => const CircularProgressIndicator(),
+          loading: loading ?? () => const Center(child: CircularProgressIndicator()),
           error: (e, s) {
             if (e is geolocator.LocationServiceDisabledException) {
               return StateInfoWidget(
